@@ -1,0 +1,10 @@
+Crop,Temperature,Rainfall,Fertilizer,Humidity,Yield
+Rice,25,100,50,60,2000
+Wheat,30,120,60,65,2500
+Maize,22,80,40,70,1800
+Cotton,32,60,45,50,1500
+Sugarcane,28,200,80,75,8000
+Potato,18,50,30,55,12000
+Rice,28,110,55,85,2300
+Wheat,35,150,70,55,3000
+Maize,20,70,35,40,1600

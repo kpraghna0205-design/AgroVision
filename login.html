@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AgroVision Login</title>
+    <style>
+        body { font-family: Arial; background: #e8f5e9; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-box { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 8px solid #2e7d32; text-align: center; width: 300px; }
+        h2 { color: #2e7d32; margin-bottom: 20px; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button { background: #2e7d32; color: white; border: none; padding: 12px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        p { color: red; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>🌱 AgroVision</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">LOGIN</button>
+        </form>
+        {% if error %}<p>{{ error }}</p>{% endif %}
+    </div>
+</body>
+</html>

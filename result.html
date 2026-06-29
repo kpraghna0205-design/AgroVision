@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AgroVision Analysis Report</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #e8f5e9; margin: 0; padding: 20px; text-align: center; }
+        .report-card { background: white; max-width: 600px; margin: 30px auto; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 10px solid #2e7d32; }
+        h1 { color: #2e7d32; margin-bottom: 5px; }
+        .yield-box { margin: 20px 0; }
+        .yield-val { font-size: 45px; font-weight: bold; color: #2e7d32; margin: 0; }
+        .revenue-val { color: #f57f17; font-size: 24px; font-weight: bold; margin-top: 5px; }
+        
+        /* New Camera Section */
+        .camera-box { background: #fff3e0; padding: 20px; border-radius: 12px; border: 1px solid #ff9800; margin-top: 25px; text-align: left; }
+        
+        /* Advice Section */
+        .advice-box { background: #e3f2fd; padding: 20px; border-radius: 12px; border: 1px solid #2196f3; margin-top: 20px; text-align: left; }
+        
+        .btn { display: inline-block; margin-top: 30px; background: #2e7d32; color: white; text-decoration: none; padding: 12px 30px; border-radius: 8px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="report-card">
+        <h1>🌾 AgroVision AI Report</h1>
+        <p>Analysis for Crop: <b>{{ crop }}</b></p>
+        <hr>
+
+        <div class="yield-box">
+            <p style="margin:0; color:#666;">Estimated Predicted Yield</p>
+            <h2 class="yield-val">{{ yield_val }} <small style="font-size: 18px;">kg/acre</small></h2>
+            <h3 class="revenue-val">💰 Market Revenue: ₹ {{ revenue }}</h3>
+        </div>
+
+        <!-- NEW: Camera Leaf Analysis Result -->
+        <div class="camera-box">
+            <h3 style="margin:0; color:#e65100;">📸 Camera Leaf Analysis:</h3>
+            <p style="margin:10px 0 0 0;"><b>Result:</b> {{ leaf_status }}</p>
+        </div>
+
+        <div class="advice-box">
+            <h3 style="margin:0; color:#0d47a1;">💡 Farmer Optimization Advice:</h3>
+            <p style="margin:10px 0 0 0;">{{ advice }}</p>
+        </div>
+
+        <br>
+        <a href="/" class="btn">← Back to Dashboard</a>
+    </div>
+
+</body>
+</html>
